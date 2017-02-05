@@ -1,0 +1,59 @@
+\documentclass[paper=a4, fontsize=11pt,twoside]{article}
+
+% --------------------------------------------------------------------
+% General Page Layout
+% --------------------------------------------------------------------
+\usepackage[a4paper]{geometry}
+\usepackage[parfill]{parskip}
+\setlength{\oddsidemargin}{5mm}		% Remove 'twosided' indentation
+\setlength{\evensidemargin}{5mm}
+%%
+% --------------------------------------------------------------------
+% Encoding and Language Settings
+% --------------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}			% encoding may need to be changed depending on the system
+\usepackage[swedish]{babel}
+\usepackage{lipsum}					% Lorem Ipsum
+
+% --------------------------------------------------------------------
+% Utilities (colors, links, pictures, ect...)
+% --------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage[round]{natbib}
+\usepackage{float}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Möte}
+\author{Grupp 2}
+\date{30-01-17}
+
+\begin{document}
+\maketitle	
+
+
+\section{Agenda}
+
+\begin{itemize}
+  \item Rimliga tidsuppskattningar för dokument filer innan inlämning till granskaren.
+  \item Bestämma sekreterare för granskningen.
+\end{itemize}
+
+\section{Protokoll}
+
+\begin{itemize}
+  \item Bestämmelser:
+  	\begin{itemize}
+  	\item SDP filer ska lämnas in innan 19.00
+    \item SRS filer ska lämnas in innan 17.00
+    \item SVVS filer ska lämnas in innan 18.00
+    \item Formatering och inlämning ska ske innan 21.00 
+    \item Erik Rosenström är sekreteraren för gruppen.
+	\end{itemize}
+\end{itemize}
+
+\end{document}

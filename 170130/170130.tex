@@ -1,0 +1,66 @@
+\documentclass[paper=a4, fontsize=11pt,twoside]{article}
+
+% --------------------------------------------------------------------
+% General Page Layout
+% --------------------------------------------------------------------
+\usepackage[a4paper]{geometry}
+\usepackage[parfill]{parskip}
+\setlength{\oddsidemargin}{5mm}		% Remove 'twosided' indentation
+\setlength{\evensidemargin}{5mm}
+%%
+% --------------------------------------------------------------------
+% Encoding and Language Settings
+% --------------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}			% encoding may need to be changed depending on the system
+\usepackage[swedish]{babel}
+\usepackage{lipsum}					% Lorem Ipsum
+
+% --------------------------------------------------------------------
+% Utilities (colors, links, pictures, ect...)
+% --------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage[round]{natbib}
+\usepackage{float}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Möte}
+\author{Grupp 2}
+\date{30-01-17}
+
+\begin{document}
+\maketitle	
+
+\section{Frånvarande}
+\begin{itemize}
+  \item Sebastian (ikke meddelat)
+  \item Richard
+\end{itemize}
+
+\section{Agenda}
+
+\begin{itemize}
+  \item Ground Rules
+  \item Tidsrapporter
+  \item Planering
+\end{itemize}
+
+\section{Protokoll}
+
+\begin{itemize}
+  \item Tidsrapporter ska vara inlämnade under måndagen senast innan 12-slaget.
+  \item Dokumenten för inlämning till formell granskning ska lämnas in enligt
+  följande:
+	\begin{itemize}
+    \item Mapp skapas för varje dokument(SRS, SVVS, SDP,...).
+    \item I varje mapp ska det innehålla en tex-fil och bilder.
+    \item PDF-fil skapas efterhand från tex-filen.
+    \item PDF-filer skickas för formell granskning.
+	\end{itemize}
+\end{itemize}
+
+\end{document}
