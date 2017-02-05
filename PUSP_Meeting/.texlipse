@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Tue Jan 31 18:22:22 CET 2017
+markTmpDer=true
+builderNum=0
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=dvi
+tempDir=tmp
+mainTexFile=PUSP_Meeting.tex
+outputFile=PUSP_Meeting.dvi
+langSpell=en
+markDer=true
+srcDir=
