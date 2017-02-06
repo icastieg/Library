@@ -1,0 +1,478 @@
+\documentclass[paper=a4, fontsize=11pt,twoside]{article}
+
+% -------------------------------------------------------------------- 
+% General Page Layout
+% --------------------------------------------------------------------
+\usepackage[a4paper]{geometry} 
+\usepackage[parfill]{parskip}
+\setlength{\oddsidemargin}{5mm}  % Remove 'twosided' indentation
+\setlength{\evensidemargin}{5mm}
+
+% --------------------------------------------------------------------
+% Encoding and Language Settings
+% --------------------------------------------------------------------
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}   
+% encoding may need to be changed depending on the system
+\usepackage[swedish]{babel} 
+\usepackage{lipsum} % Lorem Ipsum
+
+% --------------------------------------------------------------------
+%  Utilities (colors, links, pictures, ect...)
+% --------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage[round]{natbib}
+\usepackage{float}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+% -----------------------------------------------------------------------------%
+% Title Page / Document Class Definitions (Please Don't Play With This)
+% -----------------------------------------------------------------------------%
+	
+% Table of contents depth = section & subsection
+\setcounter{tocdepth}{1}
+																								
+% Horizontal rule
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}   															
+																											
+% Document Number
+\newcommand{\documentNumber}[1]{\centering PUSP1742#1 \\[1.0cm]}	 										
+																											
+% Document Version
+\newcommand{\documentVersion}[1]{\centering \small{v.#1} \\[1.0cm]}
+
+% Group Responsible
+\newcommand{\documentResponsible}[1]{\centering  Ansvarig Grupp: #1}
+
+% Document Creator Group
+\newcommand{\documentCreator}[1]{\centering Uppgjord Av: #1}	 									
+																										
+% Title
+\makeatletter \def\printtitle{ {\centering \@title\par}} \makeatother
+																											
+% Author .. not really used, but it can stay in case
+\makeatletter \def\printauthor{ {\centering \large \@author}} \makeatother
+																											
+\newcommand{\grouptitlepage}[4]{ 
+	\title{
+		\documentNumber{#1}																						
+		\documentVersion{#2}																				
+		\HRule{0.5pt} \\ % Upper rule 
+		\LARGE \textbf{\uppercase{#3}} \\
+		\large \textbf{\uppercase{ETSF20 Grupp 2}} 
+		\HRule{2pt} \\ [1.5cm]    
+		\normalsize            
+		\documentResponsible{#4} \\ 
+		\documentCreator{#4}  
+	}																							
+	\maketitle																							
+	\thispagestyle{empty} 																					
+	\newpage 
+}
+% \grouptitlepage{doc number}{Version Number}{doc title}{group responsible for
+% doc}
+% --------------------------------------------------------------------------------%
+% Title Page / Document Class Definitions (Please Don't Play With This)
+% --------------------------------------------------------------------------------%
+
+
+% \date{}                                            
+% Activate to display a given date or keep commented for current date
+
+
+% -------------------------------------------------------
+% DOCUMENT START (YOU CAN IGNORE EVERYTHING ABOVE HERE)
+% -------------------------------------------------------
+\begin{document}
+
+%---------------------------------------------------------------------------------------------------------------------------------------
+% Title Page START: \grouptitlepage{doc number}{Version Number}{doc title}{group responsible for doc}		
+%---------------------------------------------------------------------------------------------------------------------------------------
+\grouptitlepage
+%Document Code Number (same as time reports)
+{11}
+%Document Version Number										
+{0.5}
+%Document Title		Dokumentmall							
+{SDP - Projektplan}
+%Group Responsible For Document									
+{(PG) Projekt Grupp}	
+% -------------------------------------------------------------------------------------------------------------
+% Title Page END				
+% -------------------------------------------------------------------------------------------------------------
+\tableofcontents
+\section{Inledning}
+Detta dokument beskriver utvecklingsmodell och utvecklingsplan för E-KYSS. Detta kommer bli ett system för tidsrapportering för större projekt baserat på ``Baseblock system''. E-KYSS kommer utvecklas av studenter på kursen ''Programvaruutveckling för stora projekt'' vid Lunds Tekniska Högskola.
+\paragraph{Projektmål:} Leverera ett fungerande system enligt kundens krav.
+\paragraph{Gruppmål:} Hålla till tidsplanering och skapa ett produktiv arbetsmiljö.
+
+\section{Referensdokument}
+\begin{itemize}
+\item Software Specification Document BaseBlockSystem, PUSS12010, v1.0
+\end{itemize}
+\section{Utvecklingsplan}
+
+\subsection*{Dokument}
+
+\begin{tabular}{| l | l | l |}
+\hline
+\textbf{Svenska} & \textbf{Engelska} & \textbf{Förkortning} \\
+\hline
+\hline
+ Konfigurationsenhetslista & Configuration Management List & CML \\
+ \hline
+Utvecklingsplan	 & Software Development Plan & SDP \\
+\hline
+Kravspecifikation & Software Requirements Specification & SRS \\
+\hline
+Testspecifikation & Software Verification and Validation Specification & SVVS \\
+\hline
+Testinstruktion & Software Verification and Validation Instruction & SVVI \\
+\hline
+Högnivådesign & Software Top Level Design Document & STLDD \\
+\hline
+Lågnivådesign & Software Detailed Design Document & SDDD \\
+\hline
+Testrapport & Software Verification and Validation Report & SVVR \\
+\hline
+Systemspecifikation & System Specification Document & SSD \\
+\hline
+Projektets slutrapport & Project Final Report & PFR \\
+\hline
+\end{tabular}\\
+%{\color{red}{Lägga till Konfigurationsenheteslista?}}
+
+\section{Personalorganisation}
+Följande roller definieras i projektplanen: 
+\begin{itemize}
+\item Kund
+\item Kvalitetsutvärderare
+\item Sektionschef
+\item Experter
+\item Förändringskontrollanter
+\item Projektledare
+\item Systemansvarig
+\item Utvecklare
+\item Testare
+\end{itemize}
+
+\subsection*{Kund}
+Kunden är den som ger projektgruppen dess uppdrag och är mottagare av resultatet. Kunden ska även godkänna den levererade produkten. Kunden har rätt att under projektets gång kunna gå in i projektet och göra en extern kvalitetsutvärdering. Denna innefattar rätten att kontrollera att projektet följer den planerade processen och att status gentemot den framtagna utvecklingsplanen stämmer. 
+\begin{itemize}
+\item Christin Lindholm är kund under detta projekt. 
+\end{itemize}
+
+\subsection*{Kvalitetsutvärderare}
+Kvalitetsutvärderaren kommer att granska majoriteten av de dokument som projektet genererar. Vid formella granskningar kommer denne representera kunden och arbeta för att förbättra projektets kvalité, standard och för att kontrollera att utvecklingsmodellen följs. Kvalitetsutvärderaren har rätt att tillgå projektet och kontrollera dess status.
+\begin{itemize}
+\item Alma Orucevic-Alagic är kvalitetsutvärderare under detta projekt.
+\end{itemize}
+
+\subsection*{Sektionschef}
+Sekstionschefen är projektgruppens högste chef och ska hjälpa projektgruppen med eventuella icke-tekniska problem som kan dyka upp under projektets gång. Dock skall alla problem i görligaste mån först tas upp med projektledargruppen, som står för kontakten med sektionschefen.
+\begin{itemize}
+\item Christin Lindholm är sektionschef för detta projekt.
+\end{itemize}
+		
+	 
+\subsection*{Experter}
+Experter finns tillgängliga för projektet för ingående frågor gällande krav, design och test. Dessa experter är inte ingående i projektet men kan träffas efter överenskommelse.
+\begin{itemize}
+\item Alma Orucevic-Alagic och Anders Bruce är experter till detta projekt.
+\end{itemize}
+	
+
+\subsection*{Förändringskontrollgrupp}
+Under detta projekt kommer kombinationen av systemansvariga och projektledare agera som förändringskontrollsgrupp. Denna är ansvarig för konfigurationshanteringen med systemgruppen som huvudansvariga. Projektledarna är inblandade för att kunna fatta beslut om ändringsåtgärder som kräver resurs- eller planeringsändringar.
+\begin{itemize}
+\item Förändringskontrollgruppen refereras hädanefter som FKG. 
+\end{itemize}
+		
+\subsection*{Projektledargrupp}
+Projektledargruppen har det övergripande administrativa ansvaret för projektet och är ytterst ansvariga för slutprodukten. De skall producera dokument som detaljerar: tidsplan, utvecklingsplan, konfigurationsenheter, projektets slutrapport och systemets specifikation.
+Projektledargruppen skall även ansvara för att övriga gruppmedlemmar har:
+\begin{itemize}
+\item Arbetsuppgifter
+\item Nödvändig utbildning och  information
+\item En jämn arbetsbelastning
+\end{itemize}
+Vidare skall projektledargruppen:	
+\begin{itemize}	 
+\item Kontrollera att tidplanen följs och håller
+\item Ansvara för kontakterna med kunden, granskaren och sektionschefen
+\item Sammankalla till möten
+\item Ansvara för dokumentbibliotekets tillgänglighet och organisation
+\item Kontrollera och ansvara för projektmedlemmarnas tidsrapportering
+\end{itemize}
+Projektledare i detta projekt är Andreas Mårdén och Gregory Austin.	
+Projektledargruppen kommer hädanefter refereras till som PG.
+
+
+\subsection*{Systemgrupp}
+Systemgruppen består av de systemansvariga projektmedlemmarna. Dessa är ansvariga för att leda det tekniska arbetet och slutproduktens design. Systemgruppen skall tillsammans med Utvecklingsgruppen producera dokument såsom: Kravspecifikation, Högnivådesign och Lågnivådesign. 
+De skall även ansvara för: 
+\begin{itemize}
+\item God konsistens mellan Kravspecifikationen och Testspecifikationen 
+\item Att ha hög förståelse för grundsystemet ''Baseblock system'' och den produkt som skapas	 
+\item Ansvara för gränssnitten mellan olika delar av systemet
+\item Övervaka och styra all utveckling för att försäkra att systemets delar blir så likvärdiga som möjligt
+\end{itemize}
+% i detta projekt
+Systemansvariga är Benjamin Holmqvist, Carl Rikner och Marlina Degirmenci. 
+Systemgruppen kommer hädanefter refereras till som SG.
+
+\subsection*{Utvecklingsgrupp}
+Utvecklingsgruppen kommer ta hand om utvecklingen av det system som skall levereras. Utvecklingsgruppen skall producera delkapitel för sin funtionalitet i dokumenten Kravspecifikation, Högnivådesign och Lågnivådesign. De är huvudansvariga för att utveckla funktionalitet enligt kravspecifikationen och att utföra enhetstestning. Utvecklare i detta projekt är: Carl Gustavsson, Christian Shehadeh, Javier Poremski, Johannes Sunnanväder, Maurits Johansson, Richard Elvhammar, Sebastian Bergdahl, Simon Farre.
+Utvecklingsgruppen kommer hädanefter refereras till som UG.
+
+\subsection*{Testgrupp}
+Testgruppen har ansvaret för testningen av det utvecklade systemet. De skall producera dokumenten Testspecifikation, Testinstruktioner samt en avslutande rapport för produktens testresultat. En utpekad testledare skall vidare ha ansvaret för konsistens mellan testspecifikationen och kravspecifikationen tillsammans med en utvald systemledare. Testgruppen består av: Emil Kristiansson, Erik Rosenström och Simon Plato.
+Testgruppen kommer hädanefter refereras till som TG.
+
+\section{Tidplan}
+\begin{table}[H]
+\centering
+\begin{tabular}{| l | c | c | c | c |} %5
+\hline
+ & \textbf{Fas 1} & \textbf{Fas 2} & \textbf{Fas 3} & \textbf{Fas 4}\\
+\hline
+\hline
+\textbf{Start:} & v3 & v6 & v8 & v10 \\
+\hline
+\textbf{Stopp:} & v6 & v8 & v11 & v12 \\
+\hline
+ 				& SDP & & & PFR \\
+\textbf{Dokument:} & SRS & STLDD & SDDD & SSD \\
+ 				& SVVS & SVVI & & SVVR \\
+\hline
+			& 30/1 	& 10/2 & 1/3 	& 15/3\\
+			& 3/2   	& 13/2 & 6/3 	& 20/3\\
+\textbf{Möten:}	& 7/2 	& 17/2 & 9/3 	& \\
+			& 		& 22/2 &		& \\
+			& 		& 27/2 &		& \\
+\hline
+\textbf{InfGran:} & 30/1 & 18/2 & 15/3 & 20/3 \\
+\hline
+\textbf{FormGran:} & 6/2 & 22/2 &	 & 23/3 \\
+\hline
+\textbf{OmGran:} & 10/2 & 1/3 &		 & \\
+\hline
+\end{tabular}
+{ \fontsize{6pt}{0.2cm}\selectfont \caption{Tidplan}}
+\end{table}
+
+
+\subsection*{Skattning}
+\begin{table}[H]
+\centering
+\begin{tabular}{| l | c | c | c | c | c | c | c | c | c | c |}
+\hline
+ & \textbf{v3} & \textbf{v4} & \textbf{v5} & \textbf{v6} & \textbf{v7} & \textbf{v8} & \textbf{v9} & \textbf{v10} & \textbf{v11} & \textbf{v12}\\
+\hline
+\textbf{Arbetstid:}  &  & 8 & 6 & 16 & 14 & 26 & 22 & 20 & 24 & 18 \\
+\hline
+\end{tabular}\\
+% TODO text to comment on table for skantning p{5cm}
+{ \fontsize{6pt}{0.2cm}\selectfont \caption{Skattning är baserat på maximal tillgänglig tid i schemat minus timmar avsatta för laborationsförberedelse i andra kurser. Då projektgruppen är nyskapad utan tillgång till tidigare projekt finns ingen data på medlemmarnas LOC/tid.}}
+\end{table}
+
+%Skattning är baserat på maximal tillgänglig tid i schemat minus timmar
+%avsatta för laborationsförberedelse i andra kurser.
+%Då projektgruppen är nyskapad utan tillgång till tidigare projekt finns ingen
+%data på medlemmarnas LOC/tid.
+
+\subsection*{Summering av tid avsatt per fas ger tid avsatt per dokument:}
+\begin{itemize}
+\item Fas 1: 30 timmar (SDP, SRS, SVVS)
+\item Fas 2: 62 timmar (STLDD, SVVI)
+\item Fas 3: 92 timmar (SDDD)
+\item Fas 4: 62 timmar (SSD, PFR, SVVR)
+\end{itemize}
+Notera att 48 timmar i fas 2 -också- är inräknade i fas 3. 44 i fas 3 är också inräknade i fas 4.
+Detta då grupperna kan arbeta med viss parallelitet.
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{| l | c | c | c | c | c | c | c |}
+\hline
+& Mån & Tis & Ons & Tors & Fre & Lör & Sön \\
+\hline
+v5 & M/I & & & & M & & \\
+\hline
+v6 & F & M & & & O/M & & \\
+\hline
+v7 & M & & & & M & I & \\
+\hline
+v8 &  &  & F/M & & & & \\
+\hline
+v9 & M &  & O/M & &  & & \\
+\hline
+v10 & M & & & M &  & & \\
+\hline
+v11 &  & T & M/I & &  & & \\
+\hline
+v12 & M/I &  & & F-D & & & \\
+\hline
+\end{tabular}
+{ \fontsize{6pt}{0.2cm}\selectfont \caption{M=Möte, I=Informell granskning, F=Formell granskning, O=Omgranskning, T=Tentamen}}
+\end{table}
+
+%{ \fontsize{6pt}{0.2cm}\selectfont -Stuff}
+
+%M=Möte, I=Informell granskning, F=Formell granskning, O=Omgranskning, T=Tentamen
+
+
+%TODO text to comment on table
+
+\section{Specifikationer av programhjälpmedel, tekniker och metoder}
+
+\subsection*{Programmeringsspråk som används:}
+	\begin{itemize}
+	\item LaTeX för dokumenten.
+	\item Java för systemutveckling.
+	\item SQL för att styra databasfunktioner.
+	\item HTML för implementera ett användargränssnitt.
+	\end{itemize}
+
+\subsection*{Mjukvara som används:}
+	\begin{itemize}
+	\item Discord för kommunikation i gruppen.
+	\item Git för konfigurationshantering och dokumentbibliotek.
+	\item Github.com som servrar till gruppens Git-arkiver och grenar.
+	\item E-puss för att tidsrapportera.
+	\item Apache Tomcat för att implementera servrar.
+	\item MySQL för att implementera databas.
+	\item Eclipse IDE som redan stödjer Apache Tomcat
+		\begin{itemize}
+		\item EGit för användning av Git funktioner i Eclipse.
+		\item TeXlipse för att skapa LaTeX dokument i Eclipse.
+		\item MySQL Connector/J för att hantera SQL i Eclipse.
+		\item WST paket som innehåller en HTML editor för Eclipse. 
+		\end{itemize}
+	\end{itemize}
+
+\subsection*{Design- och kodningsstandarder}
+	\begin{itemize}
+	\item Gruppens dokumentmall ska användas.
+	\item Variabelnamn skall vara självförklarande och på Engelska.
+\end{itemize}
+
+
+
+\section{Konfigurationshantering}
+\subsection*{Översikt}
+Projektet kommer följa ett arbetsflöde där konfigurationshanteringsystemet Git
+integreras. Alla konfigurationsenheter som ingår i baseline samt alla dokument och systemenheter där utveckling pågår ska lagras i ett projektbibliotek. Mötesdokument kommer också finnas tillgängligt i projektbiblioteket.
+ 
+\subsection*{Projektbiblioteket}
+\begin{itemize}
+\item Projektbiblioteket implementeras av ett Git-arkiv.
+\item Arkiven kommer bestå av två delar: Ett konfigurationsbibliotek och ett mötesbibliotek.
+\item Alla dokument och systemkomponenter som definieras i CML:n kommer lagras i konfigurationsbiblioteket.
+\item Alla mötesprotokoll och agendor kommer lagras i mötesbiblioteket.
+\item Det kommer finnas tre grenar av projektbiblioteket (dvs. master,
+  $\alpha$ och $\beta$) under projektet.
+\item Dokument- och systemenhetsversionsnummer ändras bara om den läggs till
+eller ändras i master-grenen.
+\end{itemize}
+
+\subsection*{Arbetsflödet}
+\begin{itemize}
+
+\item Master-grenen av projektbiblioteket kommer finnas tillgängligt via gruppens Github.
+	\begin{itemize}
+	\item FKG har ansvar för beslut om när master ska ändras.
+	\item Master skall endast innehålla färdiga dokument och systemenheter.
+	\item ``Hotfixes'' kan tillkomma om en färdig konfigurationsenhet måste ändras.
+	\end{itemize}
+
+\item $\alpha$-gren innehåller konfigurationsenheterna som utvecklas.
+	\begin{itemize}
+	\item SG har ansvar för $\alpha$.
+	\item När en konfigurationsenhet är i utveckling, skapas en gren från $\alpha$ för
+	att utveckla en specikifk del av enheten.
+	\item Strukturen av gren(ar) från $\alpha$ bestäms av SG och UG efter behov.
+	\item SG fattar beslut om när enheter ska integreras i $\beta$ för
+	rekursivtestning. 
+	\end{itemize}
+	
+\item $\beta$-grenen är en gren från master där rekursivtestning äger rum.
+	\begin{itemize}
+	\item TG har ansvar för $\beta$. 
+	\item $\beta$ tar emot enheter från $\alpha$-grenen. 
+	\item TG fattar beslut om ett dokument eller en systemenhet ska till FKG för att integreras i master eller om den måste utvecklas mer. 
+	\end{itemize}
+	
+\end{itemize}
+
+\section{Regler}
+Projektgruppen har via möten etablerat vissa regler som kommer påverka hur arbetet förs.
+De gemensamma regler som fastställts är:
+\begin{itemize}
+\item Man kan då man skickar viktig info via Discord eller mejl begära ''Ack''. Dessa visar vilka som tagit del av informationen. Vid begärt ack skall dessa inkomma inom 24 timmar.
+\item Arbete sker på arbetsdagar, inte helger, såvida inte annat beslutas gemensamt. Med arbetsdagar menas tiden mellan 8 och 16 Måndag till Fredag. Dock så är man välkommen att arbeta vilka tider man själv vill. Men ingen kan kräva andra att arbete utanför arbetsdagar.
+\item Alla projektmedlemmar skall kontrollera sin mejl och discord dagligen på arbetsdagar. 
+\item Alla projektmedlemmar har ett eget ansvar att hålla sig informerad och att informera.
+\item Man meddelar i förhand om man inte kan komma på ett möte. Att meddela via ombud är fullt acceptabelt.
+\item Inför formell granskning skall alla läsa alla dokument. 
+\item Gruppens arbetstider är inte obligatoriska. Tidsplanering för specifika
+dokument- eller funktionsutveckling ska prioritiseras.
+\end{itemize}
+
+\section{Uppföljning och kvalitetsutvärderingsprocess}
+
+%Uppföljning och kvalitetsutvärderingsprocess
+\begin{itemize}
+\item Möten kommer ske två gånger i veckan där framsteg och problem diskuteras.
+\item Att alla grupper kommer dela arbetsrum gör att samtliga kommer vara intimt medvetna om hur arbetet fortskrider ikring dem.
+\item Om arbetet går snabbare än beräknat kommer faser och dokument tidigareläggas.
+\item Om arbetet går långsammare än beräknat kommer vi hantera situationen beroende på dess natur.
+\item Vid omgranskning/omarbete kommer vi sträva efter att gruppen så mycket som möjligt fortsätter med arbetet på de delar som är stadigast
+\item Vid tidsbrist i programmeringen kommer SG och PG sättas in som programmerare.
+\item Vid tidsbrist i testningen (Något vi förutser) kommer utvecklare sättas in som testare.
+\item Projektets kvalité kommer försäkras genom de informella granskningar som kommer ske enligt schemat (minst en per fas) och genom testning.
+\item Testning kommer att utföras av UG (enhetstester) och TG (black-box testning).
+\end{itemize}
+
+\section{Riskanalys}
+
+%Riskanalys:
+Risker som kan drabba projektet innefattar: 
+\begin{table}[H]
+\centering
+\begin{tabular}{| l | c | c | p{5cm} |}
+\hline
+	& \textbf{Sannolikhet} & \textbf{Möjlig Effekt} & \textbf{Komentar} \\
+\hline
+\textbf{Konflikter} & Hög & Låg & Konflikter bör hända i någon form. \\
+\hline
+\textbf{Sjukdomsfrånvaro} & Medel & Medel & Allvarligare sjukdom känns osannolikt. \\
+\hline
+\textbf{Större omarbete} & Hög & Låg & Planeringen förutsätter att detta sker. \\
+\hline
+\textbf{Arbetskraftsfrånvaro} & Hög & Hög & Vår mest bekymmersamma risk. \\
+\hline
+\textbf{Orealistiskt schema} & Låg & Hög & Låg risk då uppgiften har anpassats för kursen.\\
+\hline
+\textbf{Utvecklar efter fel krav} & Medel & Medel & Med god STLDD och SG kan detta undvikas. \\
+\hline
+\textbf{Låg produktprestanda} & Låg & Låg &  \\
+\hline
+\textbf{Brist på rätt kunskaper} & Låg & Hög & Kursen är anpassad för utbildningen. \\
+\hline
+\textbf{Oväntat komplexitet} & Låg & Hög & Kursen är anpassad för utbildningen.  \\
+\hline
+\textbf{Personalslitage} & Medel & Medel & Risk för låg arbetsmoral. \\
+\hline
+
+\end{tabular}
+{ \fontsize{6pt}{0.2cm}\selectfont \caption{Riskerna och deras skattningar är baserade på sunt förnuft och litteratur.}}
+\end{table}
+
+
+\end{document}

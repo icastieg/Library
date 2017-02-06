@@ -1,0 +1,151 @@
+\documentclass[paper=a4, fontsize=11pt,twoside]{article}
+
+% -------------------------------------------------------------------- 
+% General Page Layout
+% --------------------------------------------------------------------
+\usepackage[a4paper]{geometry} 
+\usepackage[parfill]{parskip}
+\setlength{\oddsidemargin}{5mm}  % Remove 'twosided' indentation
+\setlength{\evensidemargin}{5mm}
+
+% --------------------------------------------------------------------
+% Encoding and Language Settings
+% --------------------------------------------------------------------
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}   
+% encoding may need to be changed depending on the system
+\usepackage[swedish]{babel} 
+\usepackage{lipsum} % Lorem Ipsum
+
+% --------------------------------------------------------------------
+%  Utilities (colors, links, pictures, ect...)
+% --------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage[round]{natbib}
+\usepackage{float}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+% -----------------------------------------------------------------------------%
+% Title Page / Document Class Definitions (Please Don't Play With This)
+% -----------------------------------------------------------------------------%
+	
+% Table of contents depth = section & subsection
+\setcounter{tocdepth}{1}
+																								
+% Horizontal rule
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}   															
+																											
+% Document Number
+\newcommand{\documentNumber}[1]{\centering PUSP1742#1 \\[1.0cm]}	 										
+																											
+% Document Version
+\newcommand{\documentVersion}[1]{\centering \small{v.#1} \\[1.0cm]}
+
+% Group Responsible
+\newcommand{\documentResponsible}[1]{\centering  Ansvarig Grupp: #1}
+
+% Document Creator Group
+\newcommand{\documentCreator}[1]{\centering Uppgjord Av: #1}	 									
+																										
+% Title
+\makeatletter \def\printtitle{ {\centering \@title\par}} \makeatother
+																											
+% Author .. not really used, but it can stay in case
+\makeatletter \def\printauthor{ {\centering \large \@author}} \makeatother
+																											
+\newcommand{\grouptitlepage}[4]{ 
+	\title{
+		\documentNumber{#1}																						
+		\documentVersion{#2}																				
+		\HRule{0.5pt} \\ % Upper rule 
+		\LARGE \textbf{\uppercase{#3}} \\
+		\large \textbf{\uppercase{ETSF20 Grupp 2}} 
+		\HRule{2pt} \\ [1.5cm]    
+		\normalsize            
+		\documentResponsible{#4} \\ 
+		\documentCreator{#4}  
+	}																							
+	\maketitle																							
+	\thispagestyle{empty} 																					
+	\newpage 
+}
+% \grouptitlepage{doc number}{Version Number}{doc title}{group responsible for
+% doc}
+% --------------------------------------------------------------------------------%
+% Title Page / Document Class Definitions (Please Don't Play With This)
+% --------------------------------------------------------------------------------%
+
+
+% \date{}                                            
+% Activate to display a given date or keep commented for current date
+
+
+% -------------------------------------------------------
+% DOCUMENT START (YOU CAN IGNORE EVERYTHING ABOVE HERE)
+% -------------------------------------------------------
+\begin{document}
+
+% ---------------------------------------------------------------------------------------------------------------------------------------
+% Title Page START: \grouptitlepage{doc number}{Version Number}{doc title}{group responsible for doc}		
+% ---------------------------------------------------------------------------------------------------------------------------------------
+\grouptitlepage
+%Document Code Number (same as time reports)
+{10}  %CML code might become 10.... 
+%Document Version Number										
+{0.1}
+%Document Title		Dokumentmall							
+{CML - Konfigurationsenhetslista}
+%Group Responsible For Document									
+{(PG) Projekt Grupp}	
+% -------------------------------------------------------------------------------------------------------------
+% Title Page END				
+% -------------------------------------------------------------------------------------------------------------
+\tableofcontents
+\section{Inledning}
+Detta dokument består av en lista över alla konfigurationsenheter (d.v.s. alla dokument och systemkomponent) som ska konfigurationhanteras. Med konfigurationhantering menas att benämning av versioner såväl som protokollet för både ändringshantering och statusrapportering är förbestämd av gruppen. Med ett konfigurationhanteringsystem (VCS), kan problem med konflikter i ändringar från flera gruppmedlemar undvikas.
+
+\section{Referensdokument}
+\begin{itemize}
+\item PUSP174211
+\end{itemize}
+
+\section{Ansvar}
+Förändringskontrollgruppen har ansvar för konfigurationhantering av alla konfigurationhanteringsenheter på listan.
+
+\section{Konfigurationsenhetslista}
+
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Kod} &\textbf{Svenska} & \textbf{Engelska} & \textbf{Förkortning} \\
+\hline
+\hline
+{\fontsize{8pt}{0.2cm}\selectfont PUSP174210} & Konfigurationsenhetslista & {\fontsize{8pt}{0.2cm}\selectfont Configuration Management List} & CML \\
+\hline
+{\fontsize{8pt}{0.2cm}\selectfont PUSP174211} & Utvecklingsplan & {\fontsize{8pt}{0.2cm}\selectfont Software Development Plan} & SDP \\
+\hline
+{\fontsize{8pt}{0.2cm}\selectfont PUSP174212} & Kravspecifikation & {\fontsize{8pt}{0.2cm}\selectfont Software Requirements Specification} & SRS \\
+\hline
+{\fontsize{8pt}{0.2cm}\selectfont PUSP174213} & Testspecifikation & {\fontsize{8pt}{0.2cm}\selectfont Software Verification and Validation Specification} & SVVS \\
+\hline
+{\fontsize{8pt}{0.2cm}\selectfont PUSP174214} & Högnivådesign & {\fontsize{8pt}{0.2cm}\selectfont Software Top Level Design Document} & STLDD \\
+\hline
+{\fontsize{8pt}{0.2cm}\selectfont PUSP174215} & Testinstruktion & {\fontsize{8pt}{0.2cm}\selectfont Software Verification and Validation Instruction} & SVVI \\
+\hline
+{\fontsize{8pt}{0.2cm}\selectfont PUSP174216} & Lågnivådesign & {\fontsize{8pt}{0.2cm}\selectfont Software Detailed Design Document} & SDDD \\
+\hline
+{\fontsize{8pt}{0.2cm}\selectfont PUSP174217} & Testrapport & {\fontsize{8pt}{0.2cm}\selectfont Software Verification and Validation Report} & SVVR \\
+\hline
+{\fontsize{8pt}{0.2cm}\selectfont PUSP174218} & Systemspecifikation & {\fontsize{8pt}{0.2cm}\selectfont System Specification Document} & SSD \\
+\hline
+{\fontsize{8pt}{0.2cm}\selectfont PUSP174219} & Projektetsslutrapport & {\fontsize{8pt}{0.2cm}\selectfont Project Final Report} & PFR \\
+\hline
+\end{tabular}\\
+
+
+
+
+\end{document}
