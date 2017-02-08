@@ -35,7 +35,7 @@
 	
 % Table of contents depth = section & subsection
 \setcounter{tocdepth}{1}
-																								
+																							
 % Horizontal rule
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}   															
 																											
@@ -96,7 +96,7 @@
 %Document Code Number (same as time reports)
 {11}
 %Document Version Number										
-{0.5}
+{0.6}
 %Document Title		Dokumentmall							
 {SDP - Projektplan}
 %Group Responsible For Document									
@@ -113,8 +113,14 @@ Detta dokument beskriver utvecklingsmodell och utvecklingsplan för E-KYSS. Dett
 \section{Referensdokument}
 \begin{itemize}
 \item Software Specification Document BaseBlockSystem, PUSS12010, v1.0
+\item Konfigurationshanteringslista, PUSP174210
+\item Veckoplanering, PUSP1742XX %TODO: Bestäm veckoplanerings löpnummber
 \end{itemize}
 \section{Utvecklingsplan}
+
+\subsection*{Utvecklingsmodell}
+Under projektet kommer vi använda oss av vattenfallsmodellen som utvecklingsmodell. Denna består i fyra tydligt definerade faser där varje fas hanterar olika områden och betänkligheter. Fas 1 hanterar planering och specifikation, fas 2 bygger strukturen för systemet och dess testning, fas 3 implementerar, fas 4 dokumenterar och kontrollerar.
+Vattenfallsmodellens tydliga uppdelning ger klara roller och arbetsuppgifter vilket gör det lätt att organisera stora grupper under utvecklingen. Dock så skapar modellen problem med schemaläggning då vissa roller har spurter av aktivitet och perioder helt utan arbetsuppgifter. En annan utmaning är att modellen är väldigt beroende på en från början välskriven systemspecifikation. Att gå tillbaka och ändra i tidigare dokument är i denna modell svårt då dessa ingår i de externa och interna kontrakten.
 
 \subsection*{Dokument}
 
@@ -234,6 +240,8 @@ Testgruppen har ansvaret för testningen av det utvecklade systemet. De skall pr
 Testgruppen kommer hädanefter refereras till som TG.
 
 \section{Tidplan}
+För detaljerad tidplan, se Veckoplanering PUSP1742XX. %TODO: Sätt rätt löpnummer
+
 \begin{table}[H]
 \centering
 \begin{tabular}{| l | c | c | c | c |} %5
@@ -249,13 +257,7 @@ Testgruppen kommer hädanefter refereras till som TG.
 \textbf{Dokument:} & SRS & STLDD & SDDD & SSD \\
  				& SVVS & SVVI & & SVVR \\
 \hline
-			& 30/1 	& 10/2 & 1/3 	& 15/3\\
-			& 3/2   	& 13/2 & 6/3 	& 20/3\\
-\textbf{Möten:}	& 7/2 	& 17/2 & 9/3 	& \\
-			& 		& 22/2 &		& \\
-			& 		& 27/2 &		& \\
-\hline
-\textbf{InfGran:} & 30/1 & 18/2 & 15/3 & 20/3 \\
+\textbf{InfGran:} & 30/1 & 17/2 & 15/3 & 	 \\
 \hline
 \textbf{FormGran:} & 6/2 & 22/2 &	 & 23/3 \\
 \hline
@@ -277,7 +279,7 @@ Testgruppen kommer hädanefter refereras till som TG.
 \hline
 \end{tabular}\\
 % TODO text to comment on table for skantning p{5cm}
-{ \fontsize{6pt}{0.2cm}\selectfont \caption{Skattning är baserat på maximal tillgänglig tid i schemat minus timmar avsatta för laborationsförberedelse i andra kurser. Då projektgruppen är nyskapad utan tillgång till tidigare projekt finns ingen data på medlemmarnas LOC/tid.}}
+{ \fontsize{6pt}{0.2cm}\selectfont \caption{Skattning är baserat på maximal tillgänglig tid i schemat minus timmar avsatta för laborationsförberedelse i andra kurser samt viss erfarenhet under fas 1. Då projektgruppen är nyskapad utan tillgång till tidigare projekt finns ingen data på medlemmarnas LOC/tid.}}
 \end{table}
 
 %Skattning är baserat på maximal tillgänglig tid i schemat minus timmar
@@ -287,47 +289,13 @@ Testgruppen kommer hädanefter refereras till som TG.
 
 \subsection*{Summering av tid avsatt per fas ger tid avsatt per dokument:}
 \begin{itemize}
-\item Fas 1: 30 timmar (SDP, SRS, SVVS)
-\item Fas 2: 62 timmar (STLDD, SVVI)
-\item Fas 3: 92 timmar (SDDD)
-\item Fas 4: 62 timmar (SSD, PFR, SVVR)
+\item Fas 1: 30 timmar: SDP, SRS, SVVS
+\item Fas 2: 50 timmar: STLDD, 30 timmar: SVVI
+\item Fas 3: 100 timmar: SDDD
+\item Fas 4: 66 timmar: SSD, PFR, SVVR
 \end{itemize}
-Notera att 48 timmar i fas 2 -också- är inräknade i fas 3. 44 i fas 3 är också inräknade i fas 4.
-Detta då grupperna kan arbeta med viss parallelitet.
-
-
-\begin{table}[H]
-\centering
-\begin{tabular}{| l | c | c | c | c | c | c | c |}
-\hline
-& Mån & Tis & Ons & Tors & Fre & Lör & Sön \\
-\hline
-v5 & M/I & & & & M & & \\
-\hline
-v6 & F & M & & & O/M & & \\
-\hline
-v7 & M & & & & M & I & \\
-\hline
-v8 &  &  & F/M & & & & \\
-\hline
-v9 & M &  & O/M & &  & & \\
-\hline
-v10 & M & & & M &  & & \\
-\hline
-v11 &  & T & M/I & &  & & \\
-\hline
-v12 & M/I &  & & F-D & & & \\
-\hline
-\end{tabular}
-{ \fontsize{6pt}{0.2cm}\selectfont \caption{M=Möte, I=Informell granskning, F=Formell granskning, O=Omgranskning, T=Tentamen}}
-\end{table}
-
-%{ \fontsize{6pt}{0.2cm}\selectfont -Stuff}
-
-%M=Möte, I=Informell granskning, F=Formell granskning, O=Omgranskning, T=Tentamen
-
-
-%TODO text to comment on table
+Notera att 36 timmar i fas 2 -också- är inräknade i fas 3. 44 i fas 3 är också inräknade i fas 4.
+Detta då grupperna kan arbeta med viss parallelitet. Skattningen visas här per person.
 
 \section{Specifikationer av programhjälpmedel, tekniker och metoder}
 
@@ -365,6 +333,9 @@ v12 & M/I &  & & F-D & & & \\
 
 
 \section{Konfigurationshantering}
+
+Se Konfigurationshanteringslistan PUSP174210 för fullständig lista över alla konfigurationshanterade dokument.
+
 \subsection*{Översikt}
 Projektet kommer följa ett arbetsflöde där konfigurationshanteringsystemet Git
 integreras. Alla konfigurationsenheter som ingår i baseline samt alla dokument och systemenheter där utveckling pågår ska lagras i ett projektbibliotek. Mötesdokument kommer också finnas tillgängligt i projektbiblioteket.
@@ -474,5 +445,42 @@ Risker som kan drabba projektet innefattar:
 { \fontsize{6pt}{0.2cm}\selectfont \caption{Riskerna och deras skattningar är baserade på sunt förnuft och litteratur.}}
 \end{table}
 
+\subsection*{Riskhantering}
+\begin{itemize}
+\item Konflikter: 
+Konflikter är väntade i projekt av större storlek. De kommer i första hand hanteras av de involverade parterna men man kan ta upp sin konflikt med antingen systemansvariga (om konflikten kräver ett tekniskt beslut) eller projektledarna. Om konflikt föreligger med någon av dessa utan möjlighet att själva lösa det uppmanas parterna kontakta antingen en oinblandad projektledare eller sektionschefen.
+
+\item Sjukdom:
+Skulle någon projektmedlem förhindras i sitt arbete pga sjukdom så bör den omgående meddela detta. Då alla arbetar i grupper kommer projektledarna konferera med personens grupp för att uppskatta förändringen i arbetsbörda. Om den blir orealistisk kommer PG anpassa planeringen eller arbetsfördelningen.
+
+\item Större omarbete:
+Skulle något steg i projektet kräva mer omarbete än vad som planeringen tillåter kommer PG i fallande ordning omfördela arbetet, omplanera arbetet, kräva arbete utanför arbetstid och slutligen ta bort planerade funktioner.
+
+\item Frånvaro:
+Likt större omarbete men med tillägg att PG kommer kontakta-, uppmana-, förhandla med- eller kräva arbete av den frånvarande parten. Misslyckas allt detta rapporteras frånvaron till sektionschefen.
+
+\item Orealistiskt schema:
+Likt större omarbete handlar detta om tidsbrist, men där arbetstid utanför schema redan är antagen. Här återstår bara åtgärden att begränsa arbetet till de viktigaste kraven.
+
+\item Utvecklar efter fel krav:
+Skapas kod som inte är relevant för projektet ligger det på UG, SG och PG att upptäcka detta. SG har efter upptäckandet uppgiften att ge riktning för det fortsatta arbetet.
+
+\item Låg produktprestanda:
+Skulle slutprodukten eller delar av denna ha oväntat låg/otillräcklig prestanda kommer refaktorering ske utförd av eller under överinseende av SG. 
+
+\item Brist på rätt kunskaper:
+Blir det tydligt att projektets medlemmar saknar nödvändig information så kommer detta diskuteras vid projektmöten för att undersöka om: 
+\begin{itemize}
+\item Problemet är rätt formulerat.
+\item Huruvida det finns andra tillvägagångsätt.
+\item Om någon annan projektmedlem har den behövda kunskapen. 
+\item Hur informationsinskaffandet skall gå till och hur mycket tid som kan avsättas.
+\end{itemize}
+\item Oväntad komplexitet:
+Likt kunskapsbrist ovan men med mer fokust på att försöka omstrukturera problemet/koden.
+
+\item Personalslitage:
+Genom lyhördhet för medlemmarnas ansträgning och nivå av angagemang så ämnar vi att undvika utbränning. Skulle det dock ske; Se sjukdom.
+\end{itemize}
 
 \end{document}
