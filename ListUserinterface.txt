@@ -1,0 +1,10 @@
+Saker som bör tänkas på vid skapandet av användargränssnittet. Listan refererar till SRS.
+
+6.1.1 till 6.1.3 Sida för hantering av projektgrupp som skall visa projektgrupper
+6.1.1 - Varningsruta ska visas om admin vill ta bort projektgrupp
+6.1.2 - "Lägga till en projektgrupp" funktion, textbar att mata in namn
+6.1.3 - Projektgrupper ska visas och kunna väljas, "ta bort projektgrupp" funktion
+
+6.1.4 till 6.1.6 Sida för hantering av användare i en projektgrupp, admin skall i interfacet kunna tilldela olika roller
+6.1.4 - "lägga till användare" funktion
+6.1.6 - textbox för namn på användare, textbox för 
