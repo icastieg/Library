@@ -2,9 +2,28 @@ Saker som bör tänkas på vid skapandet av användargränssnittet. Listan refer
 
 6.1.1 till 6.1.3 Sida för hantering av projektgrupp som skall visa projektgrupper
 6.1.1 - Varningsruta ska visas om admin vill ta bort projektgrupp
-6.1.2 - "Lägga till en projektgrupp" funktion, textbar att mata in namn
+6.1.2 - "Lägga till en projektgrupp" funktion, mata in namn på projektgrupp i textbox
 6.1.3 - Projektgrupper ska visas och kunna väljas, "ta bort projektgrupp" funktion
 
-6.1.4 till 6.1.6 Sida för hantering av användare i en projektgrupp, admin skall i interfacet kunna tilldela olika roller
-6.1.4 - "lägga till användare" funktion
-6.1.6 - textbox för namn på användare, textbox för 
+6.1.4 till 6.1.7 Sida för hantering av användare i en projektgrupp, admin skall i interfacet kunna tilldela olika roller
+6.1.4 - "Lägga till användare" funktion
+6.1.6 - Textbox för namn på användare, textbox för e-post
+6.1.7 - Checkbox för alla användare, "ta bort" knapp
+
+6.2.2 - Knappar för "Main", "Organize group" och "Update group"
+6.2.4 - Ska kunna välja i interfacet mellan de olika rollerna
+6.2.5 - Funktion för sign
+6.2.6 - Knappar för "Time Reporting och "Sign Time Reports", visa upp lista med veckorapporter
+6.2.9 - Knappar för "Unsign reports" och "Submit changes", checkboxes för alla signerade rapporter
+6.2.10 - Meny innehållande de olika länkarna
+
+6.3.1 till 6.3.10 Sida för hantering av tidrapporter
+6.3.2 - Aktuella fält, knapp för att skicka tidrapport
+6.3.3 - Knapp för att kunna uppdatera tidrapport
+6.3.4 - Knapp för att kunna ta bort osignerade tidrapporter
+6.3.5 - Visa länk till all rapporterad tid
+6.3.7 - Knappar för "Time Reporting", "Edit time reporting" och "Submit change", 
+meny med osignerade tidsrapporter, sida för aktuell tidsrapport
+6.3.8 - Sida med tabell för total rapporterad tid
+6.3.9 - Länk för "Change password", textboxar för gammalt lösenord och nytt lösenord, notifikation efter ändrat lösenord
+6.3.10 - Felmeddelande ska visas vid felaktig inmatning
