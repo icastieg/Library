@@ -98,7 +98,7 @@
 %Document Code Number (same as time reports)
 {12}
 %Document Version Number										
-{0.1}
+{0.2}
 %Document Title		Dokumentmall							
 {SRS - Kravspecifikation}
 %Group Responsible For Document									
@@ -152,15 +152,13 @@ Bekräftar en tidrapport och sätter den i ett stadie där den inte kan ändras 
 \section{Kontextdiagram}
 \begin{figure}[H]
 \centering
-\includegraphics[width = 12cm]{kontextdiagram_SRS.png}
+\includegraphics[width = 12cm]{Kontext_Diagram.png} 
 \caption{Kontextdiagram}
 \end{figure}
 
 %6
 \section{Projektkrav}
 \subsection{Huvudkrav:}
-\subsubsection{Krav:}
-Kraven om användbarhet i grundsystemet skall även gälla för detta system.
 \subsubsection{Krav:}
 Systemet skall vara en vidareutveckling av grundsystemet ''Base Block System''
 
@@ -195,6 +193,16 @@ När systemet används på en dator i någon sal på LTH Campus Helsingborg i C-
 
 %9
 \section{Funktionella Krav}
+\subsubsection{Allmänna krav:}
+Kraven om funktionalltet i grundsystemet skall även gälla för detta system.
+\subsubsection{Allmänna krav:}
+En loggfil skapas för varje projektgrupp när projektgruppen skapas.
+\subsubsection{Allmänna krav:}
+Varje ändring av projektgruppens data sparas i sin loggfil.
+\subsubsection{Allmänna krav:}
+När en grupp tas bort sin logfil också raderas.
+\subsubsection{Allmänna krav:}
+En ändring i logfilen ska innehålla en tidsstämpel följt av användaren som gjorde ändringen.
 
 \subsection{Administratör:}
 
