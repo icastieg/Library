@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Fri Feb 10 17:04:32 CET 2017
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=VP_Gantt.tex
+outputFile=VP_Gantt.pdf
+langSpell=en
+markDer=true
+srcDir=
