@@ -1,5 +1,5 @@
 #TeXlipse project settings
-#Mon Feb 06 04:19:58 CET 2017
+#Fri Feb 10 18:37:20 CET 2017
 markTmpDer=true
 builderNum=2
 outputDir=
@@ -10,5 +10,5 @@ tempDir=tmp
 mainTexFile=SRS.tex
 outputFile=SRS.pdf
 langSpell=en
-markDer=true
+markDer=false
 srcDir=
