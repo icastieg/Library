@@ -94,9 +94,9 @@
 % ---------------------------------------------------------------------------------------------------------------------------------------
 \grouptitlepage
 %Document Code Number (same as time reports)
-{13	}
+{13}
 %Document Version Number										
-{0.1}
+{0.2}
 %Document Title		Dokumentmall							
 {SVVS - Testspecifikation}
 %Group Responsible For Document									
@@ -145,8 +145,20 @@ kundens representanter, som beskrivs i Ref 1. De informella granskningarna “ä
 planerade så att uppdaterat material kan levereras” till formell granskning.
 Utöver de informella granskningarna som anges ovan så ska även SDDD ses över av
 utvecklingsgruppen.
+\section{Test}
 
-\section{Testfall}
+\subsection{Testmiljöer}
+
+Under projektet kommer olika testmiljöer att användas. Dessa kommer att innefatta
+
+\begin{itemize}
+\item \textbf{Webbläsare (Internet Explorer 10,Google Chrome)}
+\item \textbf{Junit}
+\item \textbf{Operativsystem (Microsoft Windows 10, IOS)}
+\item \textbf{Server System (Apache Tomcat)}
+\end{itemize}
+
+\subsection{Testfall}
 
 Testerna kommer att genomföras i följande faser:
 
@@ -217,13 +229,20 @@ Under granskning ska alla krav kontrolleras av granskaren.
 
 \section{Projektkrav} 
 \begin{itemize}
-\item[FT18] Systemet uppfyller användarbarhetskraven [SRS 6.1.1] 
-\item[FT19] Systemet är en vidareutveckling av grundsystemet [SRS6.1.2]
+\item[FT18] Systemet uppfyller användarbarhetskraven [SRS 9.0.1] 
+\item[FT19] Systemet är en vidareutveckling av grundsystemet [SRS 6.1.2]
+\item[FT20] Ny loggfil skapas när ny projektgrupp skapas [SRS 9.0.2]
+\item[FT21] Loggfilen för projektgruppen uppdateras för varje ändring i
+projektgruppen [SRS 9.0.3]
+\item[FT22] Loggfilen raderas när en projektgrupp raderas från systemet [SRS
+9.0.4] 
+\item[FT23] Ett inlägg i loggfilen innehåller tidsstämpel samt användare [SRS
+9.0.5]
 \end{itemize}
 
 \section{Designkrav} 
 
-\subsection{} 
+\subsection{}
 Designkrav uppfylls ref 2 figur 2 [SRS 8.1.1]
 \subsection{}
 Designkrav uppfylls ref 2 figur 3 [SRS 8.1.2]
@@ -264,6 +283,14 @@ Designkrav uppfylls ref 2 figur 3 [SRS 8.1.2]
 	\item Dokument
 	\end{enumerate}
 \end{enumerate}
+
+
+\section{Test/krav matris}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 16cm]{SVVS_Matris.png} %height=6cm,
+\caption{Test/krav matris}
+\end{figure}
 
 
 \end{document}
