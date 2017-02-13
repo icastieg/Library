@@ -1,4 +1,5 @@
 Saker som bör tänkas på vid skapandet av användargränssnittet. Listan refererar till SRS.
+V. 0.1
 
 6.1.1 till 6.1.3 Sida för hantering av projektgrupp som skall visa projektgrupper
 6.1.1 - Varningsruta ska visas om admin vill ta bort projektgrupp
