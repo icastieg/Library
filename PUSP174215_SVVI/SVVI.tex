@@ -1,0 +1,126 @@
+\documentclass[paper=a4, fontsize=11pt,twoside]{article}
+
+% -------------------------------------------------------------------- 
+% General Page Layout
+% --------------------------------------------------------------------
+\usepackage[a4paper]{geometry} 
+\usepackage[parfill]{parskip}
+\setlength{\oddsidemargin}{5mm}  % Remove 'twosided' indentation
+\setlength{\evensidemargin}{5mm}
+
+% --------------------------------------------------------------------
+% Encoding and Language Settings
+% --------------------------------------------------------------------
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}   
+% encoding may need to be changed depending on the system
+\usepackage[swedish]{babel} 
+\usepackage{lipsum} % Lorem Ipsum
+
+% --------------------------------------------------------------------
+%  Utilities (colors, links, pictures, ect...)
+% --------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage[round]{natbib}
+\usepackage{float}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+% -----------------------------------------------------------------------------%
+% Title Page / Document Class Definitions (Please Don't Play With This)
+% -----------------------------------------------------------------------------%
+	
+% Table of contents depth = section & subsection
+\setcounter{tocdepth}{1}
+																								
+% Horizontal rule
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}   															
+																											
+% Document Number
+\newcommand{\documentNumber}[1]{\centering PUSP1742#1 \\[1.0cm]}	 										
+																											
+% Document Version
+\newcommand{\documentVersion}[1]{\centering \small{v.#1} \\[1.0cm]}
+
+% Group Responsible
+\newcommand{\documentResponsible}[1]{\centering  Ansvarig Grupp: #1}
+
+% Document Creator Group
+\newcommand{\documentCreator}[1]{\centering Uppgjord Av: #1}	 									
+																										
+% Title
+\makeatletter \def\printtitle{ {\centering \@title\par}} \makeatother
+																											
+% Author .. not really used, but it can stay in case
+\makeatletter \def\printauthor{ {\centering \large \@author}} \makeatother
+																											
+\newcommand{\grouptitlepage}[4]{ 
+	\title{
+		\documentNumber{#1}																						
+		\documentVersion{#2}																				
+		\HRule{0.5pt} \\ % Upper rule 
+		\LARGE \textbf{\uppercase{#3}} \\
+		\large \textbf{\uppercase{ETSF20 Grupp 2}} 
+		\HRule{2pt} \\ [1.5cm]    
+		\normalsize            
+		\documentResponsible{#4} \\ 
+		\documentCreator{#4}  
+	}																							
+	\maketitle																							
+	\thispagestyle{empty} 																					
+	\newpage 
+}
+% \grouptitlepage{doc number}{Version Number}{doc title}{group responsible for
+% doc}
+% --------------------------------------------------------------------------------%
+% Title Page / Document Class Definitions (Please Don't Play With This)
+% --------------------------------------------------------------------------------%
+
+
+% \date{}                                            
+% Activate to display a given date or keep commented for current date
+
+
+% -------------------------------------------------------
+% DOCUMENT START (YOU CAN IGNORE EVERYTHING ABOVE HERE)
+% -------------------------------------------------------
+\begin{document}
+
+% -------------------------------------------------------
+% Title Page START
+% -------------------------------------------------------
+\grouptitlepage
+% the \# typesets a # character into the document, you will need to replace them
+% in yourdocuments. This is a template, just plug in what you need between the
+% {}s. Document Code Number (same as time reports)
+{00}
+% Document Version Number
+{0.0}
+% Document Title
+{Title}
+% Group Responsible For Document
+{Grupp 2}
+% -------------------------------------------------------
+% Title Page END
+% -------------------------------------------------------
+\tableofcontents
+% WRITE THINGS BELOW HERE
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

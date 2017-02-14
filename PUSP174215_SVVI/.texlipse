@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Tue Feb 14 10:59:48 CET 2017
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=SVVI.tex
+outputFile=SVVI.pdf
+langSpell=en
+markDer=true
+srcDir=
