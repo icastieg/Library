@@ -96,22 +96,371 @@
 % the \# typesets a # character into the document, you will need to replace them
 % in yourdocuments. This is a template, just plug in what you need between the
 % {}s. Document Code Number (same as time reports)
-{00}
+{15}
 % Document Version Number
 {0.0}
 % Document Title
-{Title}
+{SVVI - Software Verification and Validation Intstructions}
 % Group Responsible For Document
-{Grupp 2}
+{(TG) Test Grupp}
 % -------------------------------------------------------
 % Title Page END
 % -------------------------------------------------------
 \tableofcontents
 % WRITE THINGS BELOW HERE
+\section{Introduktion}
 
+I detta dokument kommer detaljerade testinstruktioner presenteras.
 
+\section{Referensdokument}
 
+\begin{enumerate}
+\item Software Verification and validation Specification V 0.2
+\end{enumerate}
 
+\section{Testinstruktioner}
+
+De detaljerade test instruktionerna för testfallen i ref. 1 visas nedan.
+Testfallen är dokumenterade steg för steg som skall genomföras av testaren. 
+Flertalet av instruktionerna har förkrav som måste vara uppfyllda för att testet
+skall kunna genomföras korrekt samt slutkrav som ska vara uppfyllda för att testet ska kunna ses som godkänt.
+
+\subsection{Administratör}
+
+\subsubsection*{FT1 Kan skapa projektgrupper}
+Förkrav: Admin är inloggad.
+\newline
+Slutkrav:  En ny projektgrupp (projektgrupp 2) har skapats.
+
+\begin{enumerate}
+	\item Admin går till sidan för hantering av projektgrupper.
+	\item Admin väljer att lägga till projektgrupp.
+	\item Admin uppmanas att mata in namn på projektgrupp som ska skapas.
+	\item Admin matar in namnet projektgrupp 2.
+	\item En projektgrupp med namnet projektgrupp 2 har skapats.
+	\item Projektgrupp 2 har lagts till på sidan för hantering av projektgrupper.
+	\item Admin ser en uppdatering av sidan för hantering av projektgrupper.
+\end{enumerate}
+
+\subsubsection*{FT2 Kan ta bort projektgrupper}
+Förkrav: Förkrav: Admin är inloggad, det finns minst en projektgrupp i systemet däribland “projektgrupp 2” och “projektgrup 3” och “projektgrupp 4” existerar.
+\newline
+Slutkrav:  Projektgrupp 2 och projektgrupp 4 har tagits bort från systemet
+.
+\begin{enumerate}
+	\item Admin går till sidan för hantering av projektgrupper.
+	\item Admin väljer vilka/vilken projektgrupp som ska tas bort genom att markera med kryss i rutor.
+	\item Admin trycker på en knapp för att ta bort valda projektgrupper.
+	\item En varningsruta där admin ombeds bekräfta borttagningen av projektgrupper
+	visas för admin.
+	\item De projektgrupper raderas tas bort från systemet.
+	\item De grupper som har raderats finns inte kvar i systemet.
+	\item Admin ser en uppdaterad version av sidan för hantering av projektgrupper.
+	\item Den/de grupper som har tagits bort finns ej med på den uppdaterade sidan.
+\end{enumerate}
+
+\subsection*{FT3 Tilldelar rollen PG i en projektgrupp}
+	Förkrav: Admin är inloggad, det finns projektgrupp med namn projektgrupp 2,det
+	finns ingen användare i projektgruppen.
+	\newline
+	Slutkrav:  Användaren som skapats har tilldelats rollen som PG för gruppen
+	projektgrupp 2.
+	
+	\begin{enumerate}
+		\item Admin går till sidan för att hantera användare.
+		\item Admin lägger till en användare Anna till systemet och till projektgrupp
+		2.
+		\item Admin till delar rollen PG i projektgrupp 2 till Anna.
+		\item Anna får rollen som PG för projektgrupp 2.
+		\item Admin ser en uppdaterad sida för medlemmar i projektet med Anna som PG
+	\end{enumerate}
+	
+	Förkrav: Admin är inloggad, det finns minst en projektgrupp med namn
+	projektgrupp 2, det finns en användare Anna i gruppen.
+	\newline
+	Slutkrav: Anna har tilldelats rollen PG i gruppen projektgruppen.
+ 	
+ 	\begin{enumerate}
+	\item Admin går till sidan för hantering av användare för projektgrupp 2.
+	\item Admin väljer Anna bland användarna i projektgrupp  och tilldelar rollen
+	PG till henne.
+	\item Anna får rollen PG i projektgrupp 2.
+	\item Admin ser en uppdaterad sida för hantering av användare i projektgrupp 2
+	med Anna som PG.
+		
+	\end{enumerate}
+	
+	\subsection*{FT4 Lägger till och tar bort användare från systemet}
+	
+	Förkrav: Admin är inloggad, det finns ingen användare i systemet,användaren som
+	ska läggas till har en giltig epost som admin har kännedom om.
+	\newline
+	Slutkrav: Användare Anna finns i systemet.
+	
+	\begin{enumerate}
+	  \item Admin går till sidan för hantering av användare.
+	  \item Admin väljer att lägga till en användare.
+	  \item Admin väljer att mata in “Anna” som användarens namn.
+	  \item Admin väljer att mata in  Anna.Puss@Spray.se som epost address.
+		\item Admin ser en uppdatering av sidan över användare där den nya användaren
+		Anna är tillagd.
+	\end{enumerate}
+	
+	Förkrav: Admin är inloggad, det finns en projektgrupp 2 i systemet, användare 
+	Anna finns i projektgruppen.
+	\newline
+	Slutkrav: användaren Anna finns inte i systemet längre.
+	
+	\begin{enumerate}
+	 \item Admin går till sidan för hantering av användare.
+   \item Admin markerar användaren Anna.
+   \item Admin väljer att radera användare.
+   \item Admin ser en uppdatering av sidan utan användaren Anna.
+	  
+	\end{enumerate}
+	
+	Förkrav: Admin är inloggad, det finns en projektgrupp 2 i systemet, användare 
+	Anna,Nicklas och Sven finns i projektgruppen.
+	\newline
+	Slutkrav: användaren Anna,Nicklas,Sven  finns inte i systemet längre.
+	
+	\begin{enumerate}
+	\item  Admin går till sidan för hantering av användare.
+    \item Admin markerar användaren Anna, Nicklas och Sven.
+    \item Admin väljer att radera användare.
+    \item Admin ser en uppdatering av sidan utan användaren Anna, Nicklas och
+  Sven.
+	  
+	\end{enumerate}
+	
+	\subsection*{FT5 Kan ej ta bort sig själv }
+	
+	Förkrav: Admin är inloggad.
+	\newline
+	Slutkrav: Admin finns kvar i systemet.
+	
+	
+	\subsection*{FT6 Kan endast tilldela följande roller till projektmedlemmar i projektgruppen }
+	
+	Förkrav: projektledare är inloggad, det finns en projektgrupp 2 i systemet, användare  Anna finns i systemet och tillhör projektgrupp 2. 
+	\newline
+	Slutkrav: projektmedlem Anna blir tilldelad  rollen TG.
+	
+	\begin{enumerate}
+	 \item Projektledare klickar på “Main”.
+	\item En ny sida visas där projektledaren kan se “Organize group”.
+	\item Projektledare klickar på “Organize group”.
+	\item En ny sida visas med en lista på medlemmar i projektgruppen.
+	\item Projektledare klickar på roll-alternativet på medlemmen Anna.
+	\item Projektledare tilldelar rollen TG.
+	\item Projektledare trycker på knappen “Update group”.
+	\item Projektledare ser en uppdatering av sidan som visas i steg 4. 
+	  
+	\end{enumerate}
+
+	\subsection*{FT7 Kan ändra roller i projektgruppen }
+	
+	Förkrav: projektledare är inloggad, det finns en projektgrupp 2 i systemet,
+	användare  Anna finns i systemet och tillhör projektgrupp 2. Anna har rollen TG.
+	\newline
+	Slutkrav: projektmedlem Anna får sin roll ändrad.
+	
+	\begin{enumerate}
+	\item Projektledare klickar på “Main”.
+	\item Projektledare klickar på “Organize group”.
+	\item En ny sida visas med en lista på medlemmar i projektgruppen.
+	\item Projektledare klickar på roll-alternativet på medlemmen Anna.
+	\item Projektledare ändrar Annas roll från TG till SG.
+	\item Projektledare trycker på knappen “Update group”.
+	\item Projektledare ser en uppdatering av sidan som visas i steg 3 nu med Anna
+	i en ny roll.
+	\item Punkt 1-7 upprepas för samtliga roller (TG,SG,UG,PG).
+	  
+	\end{enumerate}
+	
+	\subsection*{FT8 Kommer åt sin meny}
+	Förkrav: Projektledare är inloggad
+	\newline
+	Slutkrav: Projektledaren ser sin meny och kan interagera med den
+	
+	\begin{enumerate}
+	  \item Projektledare klickar på “Main”.
+	  \item Projektledare ser en ny sidan som visar en meny.
+	  \item Projektledaren provar att klicka på “Organise group”.
+      \item Projektledaren ser en nya sida där innehållet från “Organise group”.
+      visas. 
+      \item Punkterna 1-4 upprepas för samtliga alternativ i menyn som är
+      Organize Group ,Sign report ,Unsign reports och View all reports.
+	\end{enumerate}
+	
+	\subsection*{Försöker tilldela fler roller till samma projektmedlem}
+	
+	Förkrav: projektledare är inloggad, det finns en projektgrupp 2 i systemet,
+	användare  Anna och tillhör projektgrupp 2. Anna har rollen SG.
+	\newline
+	Slutkrav: projektmedlem Anna har kvar sin roll som SG i systemet.
+	
+	\begin{enumerate}
+	 \item Projektledare klickar på “Main”.
+	\item Projektledare klickar på “Organize group”.
+	\item En ny sida visas med en lista på medlemmar i projektgruppen.
+	\item Projektledare klickar på roll-alternativet på medlemmen Anna.
+	\item Projektledare ändrar Annas roll från SG till “TG,PG“.
+	\item Projektledare trycker på knappen “Update group”.
+
+	  
+	\end{enumerate}
+
+	\subsection*{FT10 Kan attestera rapport}
+		Förkrav: projektledare är inloggad, det finns en tidrapport i “systemet” från användaren  Anna som tillhör projektgrupp 2. 
+		\newline
+		Slutkrav: Annas tisrapport blir attesterad.
+		
+		\begin{enumerate}
+		  \item Projektledare klickar på “Main” / “ Time Reporting”.
+		  \item Projektledare klickar på “Sign Time Reports”.
+		  \item En lista kommer upp med alla Veckorapporter.
+		  \item Projektledare  markerar Annas rapport och klickar på knappen “Sign”.
+		  \item När projektledaren signerat rapporten, uppdateras sidan och visar en
+	uppdaterad lista av alla veckorapporter.
+		  
+		\end{enumerate}
+		
+		Förkrav: projektledare är inloggad, det finns en tidrapport i “systemet” från användaren  Anna och Sven som tillhör projektgrupp 2. 
+		\newline
+		Slutkrav: Annas och Svens tisrapport blir attesterad
+		
+		\begin{enumerate}
+    		\item Projektledare klickar på “Main” / “ Time Reporting”.
+			\item Projektledare klickar på “Sign Time Reports”.
+			\item En lista kommer upp med alla Veckorapporter.
+			\item Projektledare  markerar Annas och Svens rapporter och klickar på
+			knappen “Sign”.
+			\item När projektledaren signerat rapporten, uppdateras sidan och visar en
+			uppdaterad lista av alla veckorapporter.
+
+				  
+
+		\end{enumerate}
+		
+		\subsection*{FT11 Kan annulera en attesterad rapport}
+		
+		Förkrav: projektledare är inloggad, det finns minst en attesterad tidrapport i “systemet” från användaren  Anna som tillhör projektgrupp 2. 
+		\newline
+		Slutkrav: Annas tidrapport blir annulerad.
+		
+		\begin{enumerate}
+		  \item Projektledare klickar på “Main” / “ Time Reporting”.
+		  \item Projektledare klickar på “Unsign Reports”.
+		  \item En lista kommer upp med alla attesterade rapporter.
+		  \item Projektledare markerar Annas rapport och klickar på knappen “Submit.
+		  \item changes” Vald rapport från anna har annulerats.
+		  
+		\end{enumerate}
+		
+		Förkrav: projektledare är inloggad, det finns minst en attesterad tidrapport i “systemet” från användaren  Anna och Sven som tillhör projektgrupp 2. 
+		\newline
+		Slutkrav: Annas och Svens tidrapport blir annulerad.
+		
+		\begin{enumerate}
+		 \item Projektledare klickar på “Main” / “ Time Reporting”.
+		 \item Projektledare klickar på “Unsign Reports”.
+		 \item En lista kommer upp med alla attesterade rapporter.
+		 \item Projektledare markerar Annas och Svens rapport och klickar sedan på
+		 knappen “Submit changes”.
+		  \item Valda rapporter har nu annulerats.
+		  
+		\end{enumerate}
+		
+		\subsection*{FT12 Kan se allas statistik i sin projektgrupp}
+		
+		\subsection*{FT13 Kan lämna in tidrapport}
+		
+		Förkrav: användare Anna är inloggad.
+		\newline 
+		Slutkrav: användare har lämnat in en tidrappor.
+		
+		\begin{enumerate}
+		  \item Anna går till sida för hantering av tidrapport(“Time reporting”?).
+			\item Anna ser en sammanställning med alla tidigare rapporterad tid.
+			\item Anna trycker på knappen “ny tidrapport“.
+			\item Anna fyller i tidrapporten enligt den tid hon har arbetat under den.
+			\item senaste veckan Användaren trycker på knappen föra att skicka
+			tidrapport.
+			\item Användaren ser en uppdatering av sidan.
+		  
+		\end{enumerate}
+		
+		\subsection*{FT14 Kan uppdatera sin tidrapport innan attestering}
+		
+		Förkrav: användaren Anna är inloggad. Anna har en osignerade rapport inlämnad. 
+		\newline
+		Slutkrav: Anna har ändrat en tidrapport
+		
+		\begin{enumerate}
+		 \item Anna går till sida för hantering av tidrapport(“Time reporting”?).
+			\item Anna trycker på knappen ska “Edit Time Report“.
+			\item Anna ser en sida med alla osignerade tidrapporter.
+			\item Anna klickar på den senaste tidrapporter.
+			\item Anna ser tidrapporten med det ifyllda värdena.
+			\item Anna ändrar X till Y.
+			\item Anna trycker på “Submit Changes”.
+			\item Ändringarna sparas.
+			\item En uppdaterad sidan visas över alla osignerade tidrapporter.
+		  
+		\end{enumerate}
+		
+		\subsection*{FT15 Kan se sin statistik}
+		Förkrav: Användaren Anna är inloggad, Anna har minst en ifylld tidrapport.
+		\newline
+		Slutkrav: Användaren ser sin statistik.
+		
+		\begin{enumerate}
+		  \item Användaren klickar på ”Time Reporting” i menyn. 
+		  \item En ny sida visas som innehåller alternativ för tidrapportering samt en
+		  sammanställning för den totalt rapporterade tiden för Anna form av en
+		  tabell.
+		  
+		\end{enumerate}
+		
+		\subsection*{FT16 Ändra lösenord}
+		
+		Förkrav: användare är inloggad.
+		\newline 
+		Slutkrav: användare har ändrat lösenordet.
+		
+		\begin{enumerate}
+		  	\item Användare trycker på Change Password i menyn.
+			\item En ny sida visas med tre textboxar.
+			\item Användaren fyller i nuvarande lösenord(skriv ut lösenord) i första.
+			\item textrutan Användaren fyller i Test1234 i textruta 2.
+			\item Användaren Fyller i Test1234 i textruta 3. 
+			\item Användaren trycker på “Change password”.
+			\item Användaren ser en ny sida där det står att lösenord är bytt.
+		  
+		\end{enumerate}
+		
+		
+		Förkrav: användare är inloggad. 
+		\newline 
+		Slutkrav: användare har ändrat lösenordet.
+		
+		\begin{enumerate}
+		\item Användare trycker på Change Password i menyn.
+		\item	En ny sida visas med tre textboxar.
+		\item	Användaren fyller i nuvarande lösenord(skriv ut lösenord) i första
+		textrutan.
+		\item Användaren fyller i Fel lösenord i textruta 2.
+		\item	Användaren upprepar i textruta 3.
+		\item	Användaren trycker på “Change password”.
+		\item	Användaren ser ett felmeddelande.
+		\item	Användare skickar till steg 2.
+		  
+		\end{enumerate}
+		
+		
+		
+		
 
 \end{document}
 
